@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph.xml"
+    app:startDestination="@id/mealsFragment">
+    <fragment
+        android:id="@+id/logInFragment3"
+        android:name="com.chaitanya.foodorder.LogInFragment"
+        android:label="fragment_log_in"
+        tools:layout="@layout/fragment_log_in" />
+    <fragment
+        android:id="@+id/mealsFragment"
+        android:name="com.chaitanya.foodorder.MealsFragment"
+        android:label="fragment_meals"
+        tools:layout="@layout/fragment_meals" >
+        <action
+            android:id="@+id/action_mealsFragment_to_dayFragment"
+            app:destination="@id/dayFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/cartFragment"
+        android:name="com.chaitanya.foodorder.CartFragment"
+        android:label="fragment_cart"
+        tools:layout="@layout/fragment_cart" >
+        <action
+            android:id="@+id/action_cartFragment_to_checkoutFragment"
+            app:destination="@id/checkoutFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/profileFragment"
+        android:name="com.chaitanya.foodorder.ProfileFragment"
+        android:label="fragment_profile"
+        tools:layout="@layout/fragment_profile" />
+    <fragment
+        android:id="@+id/todayMenuFragment"
+        android:name="com.chaitanya.foodorder.TodayMenuFragment"
+        android:label="fragment_today_menu"
+        tools:layout="@layout/fragment_today_menu" />
+    <fragment
+        android:id="@+id/dayFragment"
+        android:name="com.chaitanya.foodorder.DayFragment"
+        android:label="fragment_day"
+        tools:layout="@layout/fragment_day" >
+        <action
+            android:id="@+id/action_dayFragment_to_foodFragment"
+            app:destination="@id/foodFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/foodFragment"
+        android:name="com.chaitanya.foodorder.FoodFragment"
+        android:label="fragment_food"
+        tools:layout="@layout/fragment_food" />
+    <fragment
+        android:id="@+id/checkoutFragment"
+        android:name="com.chaitanya.foodorder.CheckoutFragment"
+        android:label="fragment_checkout"
+        tools:layout="@layout/fragment_checkout" />
+</navigation>
